@@ -38,7 +38,7 @@ class Dispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-    public function addListener(string $eventName, $listener, int $priority = 0)
+    public function addListener(string $eventName, callable $listener, int $priority = 0)
     {
         throw new \Exception('Please use `Event::listen()`.');
     }
