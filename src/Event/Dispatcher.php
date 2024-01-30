@@ -46,7 +46,7 @@ class Dispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-    public function addSubscriber(EventSubscriberInterface $subscriber)
+    public function addSubscriber(EventSubscriberInterface $subscriber): void
     {
         throw new \Exception('Please use `Event::subscribe()`.');
     }
@@ -54,7 +54,7 @@ class Dispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-    public function removeListener(string $eventName, $listener)
+    public function removeListener(string $eventName, $listener): void
     {
         throw new \Exception('Please use `Event::forget()`.');
     }
@@ -62,7 +62,7 @@ class Dispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-    public function removeSubscriber(EventSubscriberInterface $subscriber)
+    public function removeSubscriber(EventSubscriberInterface $subscriber): void
     {
         throw new \Exception('Removing event subscribers is not supported');
     }
